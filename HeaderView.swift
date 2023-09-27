@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 
-struct HeaderView:View {
+struct HeaderView: View {
     @Binding var tasks: [Task]
     @State private var enteredString: String = ""
         
@@ -18,6 +18,7 @@ struct HeaderView:View {
             TextField("Add New Task", text: $enteredString)
             Button(action:{tasks.append(Task(nameOfTask: enteredString))}, label: {
                 Text("+")
+                    .padding()
             })
            
         }
