@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 
-struct HeaderView {
+struct HeaderView:View {
     @Binding var tasks: [Task]
     @State private var enteredString: String = ""
         

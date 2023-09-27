@@ -1,11 +1,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var array:[Task] = []
+    @State var tasks:[Task] = []
     var body: some View {
+    HeaderView(tasks: $tasks)
         List {
-            ForEach(array,id:\.self){array in
-                Text(array.nameOfTask)
+            ForEach(tasks,id:\.self){tasks in
+                Text(tasks.nameOfTask)
                 
             }
             
